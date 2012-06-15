@@ -23,5 +23,17 @@ public class PlayerController : MonoBehaviour {
 			//Debug.Log("Going right.");
 			transform.Translate(new Vector3(2, 0, 0) * Time.deltaTime);
 		}
+		else if(Input.GetAxis("Vertical") < 0)
+		{
+			// Then move to the right
+			//Debug.Log("Going right.");
+			transform.Translate(new Vector3(0, -2, 0) * Time.deltaTime);
+		}
+		else if(Input.GetAxis("Vertical") > 0)
+		{
+			// Then move to the right
+			//Debug.Log("Going right.");
+			transform.Translate(new Vector3(0, 2, 0) * Time.deltaTime);
+		}		
 	}
 }
